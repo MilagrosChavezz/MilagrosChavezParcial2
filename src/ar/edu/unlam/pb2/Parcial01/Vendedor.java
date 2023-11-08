@@ -1,5 +1,7 @@
 package ar.edu.unlam.pb2.Parcial01;
 
+import java.util.Objects;
+
 public class Vendedor {
 
 	private String dni;
@@ -36,6 +38,23 @@ public class Vendedor {
 
 	public void setDeLicencia(boolean deLicencia) {
 		this.deLicencia = deLicencia;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vendedor other = (Vendedor) obj;
+		return Objects.equals(dni, other.dni);
 	}
 
 	// TODO: Completar con los getters y setters necesarios

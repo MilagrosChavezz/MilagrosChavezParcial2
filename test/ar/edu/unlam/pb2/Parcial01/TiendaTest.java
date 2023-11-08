@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.junit.Test;
@@ -98,51 +99,12 @@ public class TiendaTest {
 
 	}
 
-//	@Test
-//	public void queSePuedaObtenerUnMapaDeVentasRealizadasPorCadaVendedor()
-//			throws VendedorDeLicenciaException, VendibleInexistenteExeption {
-//		// TODO: usar como key el vendedor y Set<Venta> para las ventas
-//		Tienda tienda = new Tienda("212312", "tienda");
-//		Vendedor vendedor = new Vendedor("1", "kevin");
-//		Vendedor vendedor2 = new Vendedor("2", "mili");
-//		Vendedor vendedor3 = new Vendedor("3", "Ben");
-//
-//		Producto poducto = new Producto(1, "mouse", 213.0, 2);
-//		Producto poducto2 = new Producto(2, "mouse", 213.0, 2);
-//		Producto poducto3 = new Producto(3, "mouse", 213.0, 2);
-//		Producto poducto4 = new Producto(4, "mouse", 213.0, 2);
-//		Cliente cliente = new Cliente("1", "A");
-//
-//		tienda.agregarProducto(poducto3);
-//		tienda.agregarProducto(poducto2);
-//		tienda.agregarProducto(poducto);
-//		tienda.agregarProducto(poducto4);
-//
-//		tienda.agregarStock(poducto4, 2);
-//		tienda.agregarStock(poducto, 23);
-//		tienda.agregarStock(poducto3, 1);
-//		tienda.agregarStock(poducto2, 2);
-//
-//		tienda.agregarVendedor(vendedor);
-//		tienda.agregarVendedor(vendedor2);
-//		tienda.agregarVendedor(vendedor3);
-//
-//		tienda.agregarVenta(new Venta("738", cliente, vendedor));
-//		tienda.agregarProductoAVenta("738", poducto);
-//
-//		tienda.agregarVenta(new Venta("78", cliente, vendedor2));
-//		tienda.agregarProductoAVenta("738", poducto3);
-//
-//		tienda.agregarVenta(new Venta("78", cliente, vendedor2));
-//		tienda.agregarProductoAVenta("78", poducto2);
-//
-//		Map<Vendedor, Set<Venta>> ventasOrdenadasPorVendedor = tienda.obtenerVentasPorVendedor();
-//		ventasOrdenadasPorVendedor.get(vendedor).size();
-//
-//		assertEquals(1, ventasOrdenadasPorVendedor.get(vendedor).size());
-//		assertEquals(2, ventasOrdenadasPorVendedor.get(vendedor2).size());
-//
-//	}
+	@Test
+	public void queSePuedaObtenerUnMapaDeVentasRealizadasPorCadaVendedor()
+			throws VendedorDeLicenciaException, VendibleInexistenteExeption {
+		
+
+	}
 
 	@Test
 	public void queSePuedaObtenerElTotalDeVentasDeServicios()
@@ -183,7 +145,6 @@ public class TiendaTest {
 
 		tienda.agregarProducto(poducto);
 		tienda.agregarStock(poducto, 3);
-		
 
 		tienda.agregarVendedor(vendedor);
 

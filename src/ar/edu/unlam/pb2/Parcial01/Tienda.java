@@ -230,26 +230,25 @@ public class Tienda {
 		return clientesOrdenadosPorRazonSocial;
 	}
 
+	public Set<Venta> ventaPorVendedor(Vendedor ve) {
+		Set<Venta>ventas=new HashSet<Venta>();
+		for (Venta v : ventas) {
+			if(v.getVendedor().getDni().equals(ve.getDni())) {
+				ventas.add(v);
+			}
+		}
+		return ventas;
+	}
+	
 	public Map<Vendedor, Set<Venta>> obtenerVentasPorVendedor() {
 		// TODO: Obtiene un mapa que contiene las ventas realizadas por cada vendedor.
 		
 		Map<Vendedor,Set<Venta>> ventasPorVendedor=new HashMap<Vendedor, Set<Venta>>();
 		
-		
-		
-		
 		for (Venta v : ventas) {
-			for (Venta v2 : ventas) {
-				if(v.getVendedor().getDni().equals(v2.getVendedor().getDni())) {
-					
-					Set<Venta>listaVendedor=new HashSet<Venta>();
-					listaVendedor.add(v);
-					ventasPorVendedor.put(v.getVendedor(), listaVendedor );
-					listaVendedor.remove(v);
-				}
-			}
-			
+			ventasPorVendedor.putIfAbsent(v.getVendedor(), ventaPorVendedor(v.getVendedor()));
 		}
+		
 		
 		return ventasPorVendedor;
 	}
