@@ -4,4 +4,5 @@ public interface Vendible {
 	public Integer getCodigo();
 	public String getNombre();
 	public Double getPrecio();
+	public  TipoItem getTipo();
 }
